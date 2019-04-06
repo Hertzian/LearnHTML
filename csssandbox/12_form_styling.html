@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Styling</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4em;
+            background: #344a72;
+        }
+
+        .container{
+            width: 600px;
+            
+        }
+
+        .form-wrap{
+            background: #fff;
+
+        }
+
+        .form-group .form-wrap label{
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .form-wrap button{
+            display: block;
+            background-color: #49c1a2;
+            border: 0;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .form-wrap button:hover{
+            background: #37a08e;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        footer a{
+            color: #49c1a2;
+        }
+
+        footer a:hover{
+            color: #37a08e;
+        }
+
+        footer p{
+            color: #fff;
+        }
+
+        .bottom-text a:hover{
+            color: #333;
+        }
+
+        h1{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="form-wrap">
+            <h1>Sign Up</h1>
+            <p>It's free only takes a minute</p>
+            <form>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="firstName" id="first-name">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" name="lastName">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" name="password2" id="password2">
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="bottom-text">
+                    By clicking the sign Up button, you agree to our
+                    <a href="#">Terms & Conditions</a> and
+                    <a href="#">Privacy Policy</a>
+                </p>
+            </form>
+        </div>
+        <footer>
+            <p>Already have an account? <a href="#">Login Here</a></p>
+        </footer>
+    </div>
+</body>
+</html>
