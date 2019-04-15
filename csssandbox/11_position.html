@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS Positioning</title>
     <style>
-        body{
-            height: 4000px;
+        *{
+            margin: 0;
+            padding: 0;
         }
 
-        .box{
-            width: 100px;
-            height: 100px;
+        body{
+            height: 4000px;
         }
 
         .container{
@@ -22,29 +22,39 @@
             background: #333;
         }
 
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+
         #box-1{
             position: relative;
-            top:50px;
+            top: 50px;
             left: 50px;
             z-index: 1;
             background: red;
         }
+
         #box-2{
             position: absolute;
-            top: 20px;
+            top: 100px;
             left: 100px;
             background: yellow;
         }
+
         #box-3{
             position: absolute;
             bottom: 100px;
             right: 100px;
             background: green;
         }
+
         #box-4{
             position: fixed;
+            left: 25px;
             background: blue;
         }
+        
         #box-5{
             position: sticky;
             top: 0;

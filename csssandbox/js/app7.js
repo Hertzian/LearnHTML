@@ -74,6 +74,8 @@ b = 2;
 let z = (++b + a--)%5
 div.innerHTML = z;
 
-const mod = document.getElementById('#box-4');
-// div.innerHTML = mod.childNodes[1].value = 'Hola';
-mod.innerHTML = mod.insertAdjacentText('h3', textInput.value ='h3');
+const mod = document.querySelector('#box-4');
+console.log(mod.childNodes[1]);
+mod.childNodes[1].textContent = 'Hola';
+
+document.querySelector('#box-2').childNodes[1].textContent = 'Box-2';
