@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid areas</title>
+    <style>
+        
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 10px;
+            line-height: 1.6rem;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        .container{
+            background: #333;
+        }
+
+        .container{
+            display: grid;
+            grid-template-areas:
+            'header header header'
+            'content content sidebar'
+            'box-1 box-2 box-2'
+            'box-3 box-3 box-3'
+            'footer footer footer';
+            /* grid-gap: 1rem; */
+        }
+
+        .header{
+            grid-area: header;
+            text-align: center;
+            background: red;
+            color: #fff;
+        }
+
+        header h1{
+            padding: 2rem;
+            font-size: 3rem;
+        }
+
+        .content{
+            grid-area: content;
+            padding: 2rem;
+        }
+
+        .content h3{
+            padding: 1rem;
+            font-size: 2.rem;
+            color: #fff;
+        }
+
+        .content h3 span{
+            color: red;
+        }
+
+        .content p{
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: #ccc;
+        }
+
+        .sidebar{
+            grid-area: sidebar;
+        }
+
+        .sidebar h3{            
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .sidebar h3 span{
+            color: red;
+        }
+
+        .sidebar ul{
+            padding: 1rem;
+            list-style: none;
+            font-size: 1rem;
+            color: #ccc
+        }
+
+        .box-1{
+            grid-area: box-1;
+        }
+        .box-2{
+            grid-area: box-2;
+        }
+        .box-3{
+            grid-area: box-3;
+        }
+
+        .footer{
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .header,
+        .content,
+        .sidebar,
+        .box-1,
+        .box-2,
+        .box-3,
+        .footer{
+            border: 1px #ccc solid;
+            padding: .5rem;
+        }
+
+        @media(max-width: 600px){
+            .container{
+            grid-template-areas:
+            'header'
+            'content'
+            'sidebar'
+            'box-1'
+            'box-2'
+            'box-3'
+            'footer';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Website</h1>
+        </header>
+        <section class="content">
+            <h3><span>Welcome</span> to my Site</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sunt dolore cum vitae rem. Suscipit hic explicabo eius minima ipsa voluptate aut temporibus ducimus odio delectus. Nesciunt quasi, in, eligendi nostrum tempora aperiam eum neque animi ipsa dolores odio dolor. Amet doloremque asperiores et ab, ullam aliquam adipisci magni voluptatem!</p>
+        </section>
+        <aside class="sidebar">
+            <h3>Contact <span>Us</span></h3>
+            <ul>
+                <li>Some Company</li>
+                <li>50 Main st, Boston MA</li>
+                <li>algo@algo.com</li>
+                <li>555-555-5555</li>
+            </ul>
+        </aside>
+        <div class="box-1">
+            <h3>Heading 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, consequuntur voluptate tempora incidunt possimus atque quia iure iste aut cumque iusto cupiditate quae repellat inventore odio! Alias ipsam, quam ipsum nesciunt adipisci quod aliquam deleniti in rerum enim, harum dolore.
+            </p>
+        </div>
+        <div class="box-2">
+            <h3>Heading 2</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sapiente cupiditate quaerat sit, iste esse exercitationem eum laborum explicabo sint ipsum minima asperiores nulla velit. Similique cumque molestias quaerat accusamus, quidem odit, aspernatur eos ducimus ullam cum quasi, velit non.</p>
+        </div>
+        <div class="box-3">
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore fuga fugit explicabo suscipit dolorem eligendi debitis ipsum hic. Dignissimos veniam repellendus harum quasi nam tempore ipsa officia expedita quisquam quo, consectetur magni exercitationem modi atque alias qui suscipit pariatur?</p>
+        </div>
+        <footer class="footer">
+            <p>Copyright &copy; 2019</p>
+        </footer>
+    </div>
+</body>
+</html>
